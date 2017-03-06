@@ -22,5 +22,36 @@ describe("arabicToRoman.js translates arabic to roman numerals", () => {
         it("should return 'II' when given a 2", () => {
             expect(arabicToRoman(2)).to.equal("II");
         });
+
+        it("should return 'IV' when given a 4", () => {
+            expect(arabicToRoman(4)).to.equal("IV");
+        });
+
+        it("should return 'V' when given a 5", () => {
+            expect(arabicToRoman(5)).to.equal("V");
+        });
+        
+        it("should return 'VI' when given a 6", () => {
+            expect(arabicToRoman(6)).to.equal("VI");
+        });
+
+        it("should return 'IX' when given a 9", () => {
+            expect(arabicToRoman(9)).to.equal("IX");
+        });
+
+        it("should return 'X' when given a 10", () => {
+            expect(arabicToRoman(10)).to.equal("X");
+        });
+    });
+
+    describe("translates 40 - 100", () => {
+        it("should return 'XL' when given a 40", () => {
+            expect(arabicToRoman(40)).to.equal("XL");
+        });
+
+        it("should return 'L' when given a 50", () => {
+            expect(arabicToRoman(50)).to.equal("L");
+        });
+
     });
 });
