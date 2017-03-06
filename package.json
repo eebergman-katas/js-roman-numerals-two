@@ -1,0 +1,22 @@
+{
+  "name": "roman-numerals-two",
+  "version": "1.0.0",
+  "description": "Roman numerals kata",
+  "main": "index.js",
+  "repository": {},
+  "author": "Erin Bergman <ebergman@pillartechnology.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "_mocha --recursive",
+    "lint": "eslint .",
+    "coverage": "istanbul cover _mocha",
+    "tlc": "istanbul cover _mocha; _mocha --recursive; eslint ."
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.17.0",
+    "eslint-config-google": "^0.7.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  }
+}
