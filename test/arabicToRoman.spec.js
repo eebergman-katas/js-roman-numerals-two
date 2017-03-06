@@ -53,5 +53,61 @@ describe("arabicToRoman.js translates arabic to roman numerals", () => {
             expect(arabicToRoman(50)).to.equal("L");
         });
 
+        it("should return 'XC' when given a 90", () => {
+            expect(arabicToRoman(90)).to.equal("XC");
+        });
+
+        it("should return 'C' when given a 100", () => {
+            expect(arabicToRoman(100)).to.equal("C");
+        });
     });
+
+    describe("translates 400 - 3999", () => {
+        it("should return 'CD' when given a 400", () => {
+            expect(arabicToRoman(400)).to.equal("CD");
+        });
+
+        it("should return 'D' when given a 500", () => {
+            expect(arabicToRoman(500)).to.equal("D");
+        });
+
+        it("should return 'CM' when given a 900", () => {
+            expect(arabicToRoman(900)).to.equal("CM");
+        });
+
+        it("should return 'M' when given a 1000", () => {
+            expect(arabicToRoman(1000)).to.equal("M");
+        });
+
+        it("should return 'MMMCMXCIX' when given a 3999", () => {
+            expect(arabicToRoman(3999)).to.equal("MMMCMXCIX");
+        });
+    });
+
+    describe("boundary tests", () => {
+        it("should return an error when passed a 0", () => {
+            expect(() => {
+                arabicToRoman(0);
+            }).to.throw("Input has no Roman equivalent.")
+        })
+
+        it("should return an error when passed a number less than 0", () => {
+            expect(() => {
+                arabicToRoman(-1);
+            }).to.throw("Input has no Roman equivalent.")
+        })
+
+        it("should return an error when passed a 4000", () => {
+            expect(() => {
+                arabicToRoman(4000);
+            }).to.throw("Input has no Roman equivalent.")
+        })
+
+        it("should return an error when passed a number greater than 4000", () => {
+            expect(() => {
+                arabicToRoman(4001);
+            }).to.throw("Input has no Roman equivalent.")
+        })
+
+    })
 });

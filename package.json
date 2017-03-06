@@ -10,6 +10,7 @@
     "test": "_mocha --recursive",
     "lint": "eslint .",
     "coverage": "istanbul cover _mocha",
+    "fix": "eslint . --fix",
     "tlc": "istanbul cover _mocha; _mocha --recursive; eslint ."
   },
   "devDependencies": {
